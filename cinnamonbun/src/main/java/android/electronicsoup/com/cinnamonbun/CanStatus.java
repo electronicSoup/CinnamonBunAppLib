@@ -122,9 +122,9 @@ public class CanStatus {
 	public boolean isDcncpInitialised() {
 		byte initialised = ((byte)((byte)mCanStatus & DCNCP_INIT_STATUS_MASK));
 
-		if(initialised != 0) {
-			return(true);
-		}
+		if(initialised)
+			return (true);
+
 		return(false);
 	}
 
